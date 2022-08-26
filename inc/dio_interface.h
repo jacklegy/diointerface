@@ -5,7 +5,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <time.h>
 
+
+#define CHANNEL_NUMB (8)
 /**
  * @brief  Case IO Driver Implementation.
  * @author MS
@@ -13,8 +16,6 @@
  * @tparam 
  * 
  */
-
-
 
 
 typedef enum 
@@ -71,7 +72,8 @@ typedef struct
   FuncMode_t Fmd;
 }Config_t;
 
-static const Config_t DioConfig[] = 
+
+static  const Config_t DioConfig[CHANNEL_NUMB] =
 {
     {chl_1, INPUT, HIGH, fn_1},
     {chl_2, INPUT, HIGH, fn_1},
@@ -84,13 +86,15 @@ static const Config_t DioConfig[] =
 };
 
 
-
 err_t   DIO_Init(const Config_t  * const config);
 uint8_t DIO_ReadChannel(const Channel_t  channel);
 err_t   DIO_WriteChannel(const Channel_t  channel,State_t state);
 err_t   DIO_ToggleChannel(const Channel_t  channel);
 err_t   DIO_SetChannelMode(const Channel_t  channel, const Mode_t mode);
 err_t   DIO_SetFuncMode(const Channel_t  channel, const FuncMode_t fmode);
+
+void delay (int number_of_seconds);
+
 
 #ifdef _cplusplus
 }/*extern "C"*/

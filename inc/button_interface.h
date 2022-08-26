@@ -46,13 +46,7 @@ typedef struct
 
 
 static button_t button_1 = {BUTTON_N_1,0,0,PRESSED};
-static button_t button_2 = {BUTTON_N_2,0,0,NOT_PRESSED};
-static button_t button_3 = {BUTTON_N_3,0,0,NOT_PRESSED};
-static button_t button_4 = {BUTTON_N_4,0,0,NOT_PRESSED};
-static button_t button_5 = {BUTTON_N_5,0,0,NOT_PRESSED};
-static button_t button_6 = {BUTTON_N_6,0,0,NOT_PRESSED};
-static button_t button_7 = {BUTTON_N_7,0,0,NOT_PRESSED};
-static button_t button_8 = {BUTTON_N_8,0,0,NOT_PRESSED};
+
 
 
 
